@@ -72,7 +72,7 @@ fun TopLevel() {
             // 단계 3: `LazyColumn`으로 `toDoList`를 표시합시다.
             // `key`를 `toDoData`의 `key`를 사용합니다.
             LazyColumn {
-                items(toDoList) { toDoData ->
+                items(toDoList, key = {it.key}) { toDoData ->
                     ToDo(
                         toDoData = toDoData,
                         onEdit = onEdit,
